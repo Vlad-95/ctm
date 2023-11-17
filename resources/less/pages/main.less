@@ -1,0 +1,259 @@
+.main {
+  overflow: hidden;
+  position: relative;
+
+  .circle {
+    position: absolute;
+    fill: #ededee;
+    width: 440px;
+    height: 440px;
+    z-index: -1;
+
+    &_left {
+      left: -220px;
+      bottom: 10vh;
+    }
+
+    &_bottom {
+      bottom: -220px;
+      right: -340px;
+    }
+
+    &_right {
+      top: -65px;
+      right: -100px;
+      width: 320px;
+      height: 320px;
+      z-index: 1;
+      fill: @white;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: auto 485px;
+    gap: 0 115px;
+  }
+
+  &__content {
+    .column-align-start-mixin();
+    .column-justify-center-mixin();
+    min-height: 100vh;
+    padding: 40px 0;
+    position: relative;
+  }
+
+  &__side {
+    .column-align-start-mixin();
+    .column-justify-center-mixin();
+    min-height: 100vh;
+    background-color: @blue;
+    position: relative;
+    padding: 85px 0 40px;
+    padding-left: 100px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 100%;
+      top: 0;
+      width: 10000px;
+      height: 100%;
+      background-color: @blue;
+    }
+  }
+
+  .logo {
+    margin-bottom: max(8.5vh, 40px);
+
+    svg {
+      width: 370px;
+      height: 140px;
+    }
+  }
+
+  .wysiwyg {
+    margin-bottom: 30px;
+  }
+
+  .info {
+    margin-top: max(8.5vh, 30px);
+    font-weight: 300;
+    color: #979898;
+  }
+
+  .contacts {
+    &__title {
+      font-family: @roboto_condensed;
+      font-size: 25px;
+      color: @white;
+      text-transform: uppercase;
+      margin-bottom: max(7vh, 40px);
+    }
+
+    &__item {
+      .column-align-start-mixin();
+
+      &:not(:last-child) {
+        margin-bottom: max(5.3vh, 30px);
+      }
+
+      .name {
+        font-weight: 500;
+        font-size: 16px;
+        color: @white;
+        line-height: 1.2;
+        margin-bottom: 7px;
+      }
+
+      .thin {
+        font-weight: 300;
+        font-size: 16px;
+        color: @white;
+        line-height: 1.2;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    .circle {
+      width: 200px !important;
+      height: 200px !important;
+
+      &_left {
+        left: -100px;
+        bottom: 40px;
+      }
+
+      &_bottom {
+        bottom: -100px;
+        right: -100px;
+      }
+
+      &_right {
+        top: -65px;
+        right: -65px;
+      }
+    }
+
+    &__wrap {
+      grid-template-columns: auto 400px;
+      gap: 0 40px;
+    }
+
+    &__content {
+      .column-justify-start-mixin();
+      padding: 40px 0;
+    }
+
+    &__side {
+      .column-justify-start-mixin();
+      padding: 40px 0;
+      padding-left: 40px;
+    }
+
+    .logo {
+      svg {
+        width: 280px;
+        height: 106px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    background-color: @blue;
+    min-height: 100vh;
+    &__wrap {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      min-height: auto;
+      background-color: @white;
+      margin: 0 -15px;
+      padding: 40px 15px;
+    }
+
+    &__side {
+      min-height: auto;
+      padding-left: 0;
+
+      &:after {
+        left: -15px;
+        z-index: -1;
+      }
+    }
+
+    .logo {
+      margin-bottom: 40px;
+
+      svg {
+        width: 200px;
+        height: 76px;
+      }
+    }
+
+    .wysiwyg {
+      margin-bottom: 30px;
+    }
+
+    .info {
+      margin-top: 0;
+      font-size: 12px;
+    }
+
+    .contacts {
+      width: 100%;
+
+      &__title {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+
+      &__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+
+        .name {
+          font-size: 12px;
+        }
+
+        .thin {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    .contacts {
+      &__wrap {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main {
+    .contacts {
+      &__wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
