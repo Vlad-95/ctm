@@ -1,5 +1,5 @@
-import $ from 'jquery';
+import { sliders } from './components/sliders';
 
-window.$ = $;
-
-$(document).ready(function () {});
+document.addEventListener('DOMContentLoaded', function () {
+  sliders();
+});

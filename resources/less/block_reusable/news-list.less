@@ -1,0 +1,50 @@
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  .item {
+    border-radius: 30px;
+    overflow: hidden;
+
+    &__image {
+      display: block;
+      position: relative;
+      padding-top: 74%;
+      background-color: @gray1;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+      }
+    }
+
+    &__content {
+      .column-align-start-mixin();
+      background-color: @gray;
+      padding: 29px 32px;
+    }
+
+    &__date {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    &__name {
+      font-size: 17px;
+      line-height: 1.5;
+      margin-bottom: 54px;
+    }
+
+    &__link {
+      margin-top: auto;
+      padding: 9px 10px;
+    }
+  }
+}

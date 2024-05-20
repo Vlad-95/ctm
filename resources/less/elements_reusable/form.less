@@ -1,0 +1,35 @@
+.form {
+  &__item {
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  &_search {
+    position: relative;
+
+    .form__item {
+      // display: none;
+    }
+
+    button {
+      .row-align-center-mixin();
+      .row-justify-center-mixin();
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        fill: @white;
+      }
+    }
+  }
+}

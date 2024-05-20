@@ -1,0 +1,52 @@
+.main-anchors {
+  padding: 70px 0;
+  background-color: @gray;
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .item {
+    .row-align-center-mixin();
+    border-radius: 30px;
+    gap: 0 28px;
+    padding: 30px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 27px;
+      height: 27px;
+      background-image: url('/img/icons/target.png');
+      background-size: 27px 27px;
+      z-index: 2;
+    }
+
+    &:nth-child(odd) {
+      background-color: @blue;
+    }
+
+    &:nth-child(even) {
+      background-color: @dark2;
+    }
+
+    &__icon {
+      .row-align-center-mixin();
+      .row-justify-center-mixin();
+      width: 80px;
+      height: 80px;
+    }
+
+    &__name {
+      font-size: 15px;
+      font-weight: 700;
+      color: @white;
+      text-transform: uppercase;
+    }
+  }
+}
