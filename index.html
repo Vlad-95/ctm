@@ -530,13 +530,13 @@
           <h2 class="plate__title">Контакты</h2>
 
           <ul class="plate__tabs">
-            <li>Офисы</li>
-            <li>Представительства</li>
-            <li>Прозводственные площадки</li>
+            <li class="offices">Офисы</li>
+            <li class="productions">Представительства</li>
+            <li class="platforms">Прозводственные площадки</li>
           </ul>
 
           <div class="plate__content">
-            <div class="plate__item">
+            <div class="plate__item offices">
               <div class="item">
                 <div class="item__city">Санкт-Петербург</div>
 
@@ -545,12 +545,12 @@
                 </div>
 
                 <div class="item__phones">
-                  <a href="javascript:;">+7 (812) 555-55-55</a>
-                  <a href="javascript:;">+7 (812) 555-55-55</a>
-                  <a href="javascript:;">+7 (812) 555-55-55</a>
+                  <a href="tel:+78125555555">+7 (812) 555-55-55</a>
+                  <a href="tel:+78125555555">+7 (812) 555-55-55</a>
+                  <a href="tel:+78125555555">+7 (812) 555-55-55</a>
                 </div>
 
-                <div class="schedule">
+                <div class="item__schedule">
                   <p>Пн-Пт: 09:00 — 18:00</p>
                   <p>Сб-Вс: 09:00 — 18:00</p>
                 </div>
@@ -569,7 +569,99 @@
                   <a href="javascript:;">+7 (812) 555-55-55</a>
                 </div>
 
-                <div class="schedule">
+                <div class="item__mails">
+                  <a href="mailto:mail@example.ru">mail@example.ru</a>
+                </div>
+
+                <div class="item__schedule">
+                  <p>Пн-Пт: 09:00 — 18:00</p>
+                  <p>Сб-Вс: 09:00 — 18:00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="plate__item productions">
+              <div class="item">
+                <div class="item__city">Санкт-Петербург</div>
+
+                <div class="item__address">
+                  пр. Римского-Корсакова, д. 119, оф. 888
+                </div>
+
+                <div class="item__phones">
+                  <a href="tel:+78125555555">+7 (812) 555-55-55</a>
+                  <a href="tel:+78125555555">+7 (812) 555-55-55</a>
+                  <a href="tel:+78125555555">+7 (812) 555-55-55</a>
+                </div>
+
+                <div class="item__schedule">
+                  <p>Пн-Пт: 09:00 — 18:00</p>
+                  <p>Сб-Вс: 09:00 — 18:00</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="item__city">Москва</div>
+
+                <div class="item__address">
+                  пр. Римского-Корсакова, д. 119, оф. 888
+                </div>
+
+                <div class="item__phones">
+                  <a href="javascript:;">+7 (812) 555-55-55</a>
+                  <a href="javascript:;">+7 (812) 555-55-55</a>
+                  <a href="javascript:;">+7 (812) 555-55-55</a>
+                </div>
+
+                <div class="item__mails">
+                  <a href="mailto:mail@example.ru">mail@example.ru</a>
+                </div>
+
+                <div class="item__schedule">
+                  <p>Пн-Пт: 09:00 — 18:00</p>
+                  <p>Сб-Вс: 09:00 — 18:00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="plate__item platforms">
+              <div class="item">
+                <div class="item__city">Санкт-Петербург</div>
+
+                <div class="item__address">
+                  пр. Римского-Корсакова, д. 119, оф. 888
+                </div>
+
+                <div class="item__phones">
+                  <a href="tel:+78125555555">+7 (812) 555-55-55</a>
+                  <a href="tel:+78125555555">+7 (812) 555-55-55</a>
+                  <a href="tel:+78125555555">+7 (812) 555-55-55</a>
+                </div>
+
+                <div class="item__schedule">
+                  <p>Пн-Пт: 09:00 — 18:00</p>
+                  <p>Сб-Вс: 09:00 — 18:00</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="item__city">Москва</div>
+
+                <div class="item__address">
+                  пр. Римского-Корсакова, д. 119, оф. 888
+                </div>
+
+                <div class="item__phones">
+                  <a href="javascript:;">+7 (812) 555-55-55</a>
+                  <a href="javascript:;">+7 (812) 555-55-55</a>
+                  <a href="javascript:;">+7 (812) 555-55-55</a>
+                </div>
+
+                <div class="item__mails">
+                  <a href="mailto:mail@example.ru">mail@example.ru</a>
+                </div>
+
+                <div class="item__schedule">
                   <p>Пн-Пт: 09:00 — 18:00</p>
                   <p>Сб-Вс: 09:00 — 18:00</p>
                 </div>
@@ -580,6 +672,9 @@
       </div>
     </div>
 
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"
+      type="text/javascript"></script>
     <script
       type="module"
       src="./resources/js/script.js"></script>
