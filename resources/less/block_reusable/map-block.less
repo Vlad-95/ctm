@@ -10,6 +10,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    transition: 0.3s;
   }
 
   .wrapper {
@@ -55,7 +56,6 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      margin-bottom: 34px;
 
       li {
         font-size: 13px;
@@ -94,11 +94,21 @@
     }
 
     &__content {
+      height: 0;
+      position: relative;
       overflow: auto;
       max-height: 500px;
       padding-right: 60px;
+
+      transition: 0.3s;
       scrollbar-width: thin;
       scrollbar-color: @white fade(@white, 10%);
+
+      &.active {
+        display: block;
+        height: 1000px;
+        margin-top: 34px;
+      }
 
       &::-webkit-scrollbar {
         width: 6px;
@@ -111,12 +121,22 @@
       &::-webkit-scrollbar-thumb {
         background-color: @white;
         border-radius: 20px;
-        border: none;
       }
     }
 
     &__item {
-      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s;
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+      }
 
       .item {
         padding: 38px 0 30px;
