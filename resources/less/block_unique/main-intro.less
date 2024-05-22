@@ -42,7 +42,7 @@
       left: 0;
       top: 0;
       width: 100%;
-      padding-top: min(40%, 640px);
+      padding-top: 640px;
 
       img {
         position: absolute;
@@ -76,6 +76,34 @@
     &__link {
       padding: 8px 12px;
       display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .main-intro {
+    .slide {
+      &__image {
+        padding-top: 520px;
+      }
+
+      &__content {
+        padding: 155px 0 65px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main-intro {
+    .slide {
+      &__image {
+        padding-top: 450px;
+      }
+
+      &__title {
+        font-size: 40px;
+      }
     }
   }
 }
