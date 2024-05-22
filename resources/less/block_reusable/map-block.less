@@ -11,6 +11,10 @@
     height: 100%;
     z-index: 0;
     transition: 0.3s;
+
+    [class*='ground-pane'] {
+      filter: grayscale(100%);
+    }
   }
 
   .wrapper {
@@ -67,7 +71,7 @@
         padding: 7px 9px;
         transition: 0.3s;
 
-        &.offices {
+        &[data-group='offices'] {
           background-color: @violet;
 
           &.active {
@@ -75,7 +79,7 @@
           }
         }
 
-        &.productions {
+        &[data-group='productions'] {
           background-color: @blue;
 
           &.active {
@@ -83,7 +87,7 @@
           }
         }
 
-        &.platforms {
+        &[data-group='platforms'] {
           background-color: @green;
 
           &.active {
@@ -97,7 +101,7 @@
       height: 0;
       position: relative;
       overflow: auto;
-      max-height: 500px;
+      max-height: 350px;
       padding-right: 60px;
 
       transition: 0.3s;

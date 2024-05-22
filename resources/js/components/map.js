@@ -28,37 +28,43 @@ export const map = () => {
 
     objectManager = new ymaps.ObjectManager();
     let objects = [];
+    const placeholdersImage = [
+      {
+        group: 'offices',
+        default: '/img/icons/placeholder-violet.png',
+        active: '/img/icons/placeholder-violet_big.png',
+      },
+      {
+        group: 'productions',
+        default: '/img/icons/placeholder-blue.png',
+        active: '/img/icons/placeholder-blue_big.png',
+      },
+      {
+        group: 'platforms',
+        default: '/img/icons/placeholder-green.png',
+        active: '/img/icons/placeholder-green_big.png',
+      },
+    ];
 
     document
       .querySelectorAll('.map-block .plate__item .item')
       .forEach((item, index) => {
-        const dataGroup = item.getAttribute('data-group');
+        const dataGroup = item.parentElement.getAttribute('data-group');
         const dataCoords = item.getAttribute('data-coord').split(',');
-        let placeholderImage;
 
-        switch (dataGroup) {
-          case 'offices':
-            placeholderImage = '/img/icons/placeholder-violet.png';
-            break;
-          case 'productions':
-            placeholderImage = '/img/icons/placeholder-blue.png';
-            break;
-          case 'platforms':
-            placeholderImage = '/img/icons/placeholder-green.png';
-            break;
-        }
-
-        console.log(dataGroup);
         objects.push({
           type: 'Feature',
           id: index,
+          group: dataGroup,
           geometry: {
             type: 'Point',
             coordinates: dataCoords,
           },
           options: {
             iconLayout: 'default#image',
-            iconImageHref: placeholderImage,
+            iconImageHref: placeholdersImage.find(
+              (obj) => obj.group === dataGroup
+            ).default,
             iconImageSize: [41, 34],
             iconImageOffset: [-20, -20],
           },
@@ -71,8 +77,6 @@ export const map = () => {
     myMap.setBounds(objectManager.getBounds());
     myMap.setZoom(myMap.getZoom());
 
-    console.log(objects);
-
     // клик по метке, чтобы подсветить элемент в списке
     objectManager.objects.events.add('click', function (e) {
       const objectId = e.get('objectId');
@@ -80,46 +84,49 @@ export const map = () => {
       const itemInList = document.querySelector(
         `.map-block .plate__item .item[data-id="${objectId}"]`
       );
-      const itemInListGroup = itemInList.getAttribute('data-group');
+      const itemInListGroup =
+        itemInList.parentElement.getAttribute('data-group');
+
       // перемещение карты
       myMap.panTo(coords);
 
+      objectManager.objects.setObjectOptions(objectId, {
+        iconImageHref: placeholdersImage.find(
+          (obj) => obj.group === itemInListGroup
+        ).active,
+        iconImageSize: [63, 51],
+        iconImageOffset: [-30, -35],
+      });
+
+      objectManager.objects.each(function (obj) {
+        console.log(obj);
+        if (obj.id !== objectId) {
+          objectManager.objects.setObjectOptions(obj.id, {
+            iconImageHref: placeholdersImage.find(
+              (elem) => elem.group === obj.group
+            ).default,
+            iconImageSize: [41, 34],
+            iconImageOffset: [-20, -20],
+          });
+        }
+      });
+
       itemInList.click();
-      console.log(itemInListGroup);
-
-      // objectManager.objects.setObjectOptions(objectId, {
-      //   iconImageHref: '/img/icons/placeholder-active.png',
-      // });
-
-      // $(
-      //   `.plate .plate__item .block[data-id="${objectId}"] .block__name`
-      // ).trigger('click');
-
-      // $('.plate .plate__wrap').animate(
-      //   {
-      //     scrollTop: $(
-      //       `.plate .plate__item .block[data-id="${objectId}"]`
-      //     ).position().top,
-      //   },
-      //   300
-      // );
     });
   }
 
   // клик по табам в карте
   const tabs = document.querySelector('.map-block .plate__tabs');
+  const contentContainer = document.querySelector('.map-block .plate__content');
 
   tabs.addEventListener('click', function (e) {
     const tabsContainer = e.target.closest('.plate__tabs');
     const target = e.target;
 
     if (target.tagName === 'LI' && !target.classList.contains('active')) {
-      const targetClass = target.classList[0];
-      const contentContainer = document.querySelector(
-        '.map-block .plate__content'
-      );
+      const targetGroup = target.getAttribute('data-group');
       const contentItemTarget = contentContainer.querySelector(
-        `.${targetClass}`
+        `[data-group="${targetGroup}"]`
       );
 
       tabsContainer.querySelectorAll('li').forEach((item) => {
@@ -131,18 +138,44 @@ export const map = () => {
       contentContainer.querySelectorAll('.plate__item').forEach((item) => {
         if (item.classList.contains('active')) {
           item.classList.remove('active');
-          // slideUp(item, 300);
         }
       });
 
       target.classList.add('active');
       contentItemTarget.classList.add('active');
       contentContainer.classList.add('active');
-      // slideDown(contentItemTarget, 300);
 
       setTimeout(() => {
         myMap.container.fitToViewport();
       }, 300);
     }
+  });
+
+  // клик по элементам в списке
+  document.querySelectorAll('.map-block .plate__item .item').forEach((item) => {
+    item.addEventListener('click', function () {
+      const currentGroup = item.parentElement.getAttribute('data-group');
+
+      tabs.querySelectorAll('li').forEach((item) => {
+        if (item.getAttribute('data-group') === currentGroup) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+
+      contentContainer.querySelectorAll('.plate__item').forEach((item) => {
+        if (item.getAttribute('data-group') === currentGroup) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+      contentContainer.classList.add('active');
+
+      setTimeout(() => {
+        myMap.container.fitToViewport();
+      }, 300);
+    });
   });
 };
