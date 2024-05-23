@@ -3,6 +3,7 @@
 
   &__wrap {
     .row-align-center-mixin();
+    position: relative;
   }
 
   &__logo {
@@ -141,6 +142,107 @@
         top: auto;
       }
     }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          top: 6px;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          bottom: 6px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    left: calc(1190px / 2 + 310px);
+    padding: 30px 25px;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: @white;
+      font-size: 15px;
+      text-transform: uppercase;
+
+      & > li {
+        position: relative;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+
+        .toggle {
+          .row-align-center-mixin();
+          .row-justify-center-mixin();
+          position: absolute;
+          right: 0;
+          top: 5px;
+          cursor: pointer;
+          width: 11px;
+          height: 7px;
+          transition: 0.3s;
+
+          svg {
+            width: 11px;
+            height: 7px;
+            fill: @blue;
+          }
+
+          &.active {
+            transform: rotate(180deg);
+          }
+        }
+
+        .dropdown {
+          display: none;
+          list-style: none;
+          // height: 0;
+          padding: 0;
+          padding-top: 10px;
+          padding-left: 10px;
+          margin: 0;
+          font-size: 15px;
+          text-transform: none;
+          overflow: hidden;
+          // transition: 0.3s;
+
+          &.active {
+            height: 100%;
+          }
+
+          & > li {
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
   }
 
   &_main {
@@ -150,5 +252,9 @@
     left: 0;
     width: 100%;
     z-index: 3;
+
+    .menu {
+      background-color: fade(@dark, 70%);
+    }
   }
 }

@@ -40,6 +40,11 @@
       .row-justify-center-mixin();
       width: 80px;
       height: 80px;
+
+      svg {
+        width: 80px;
+        height: 80px;
+      }
     }
 
     &__name {
@@ -47,6 +52,137 @@
       font-weight: 700;
       color: @white;
       text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main-anchors {
+    padding: 40px 0;
+
+    .item {
+      padding: 20px;
+      gap: 0 20px;
+      border-radius: 20px;
+
+      &:after {
+        top: 10px;
+        right: 10px;
+      }
+
+      &__icon {
+        width: 60px;
+        height: 60px;
+
+        svg {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main-anchors {
+    .item {
+      padding: 20px 15px;
+      gap: 0 10px;
+
+      &:after {
+        top: 5px;
+        right: 5px;
+      }
+
+      &__icon {
+        width: 40px;
+        height: 40px;
+
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &__name {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-anchors {
+    &__wrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item {
+      border-radius: 30px;
+      gap: 0 28px;
+      padding: 30px;
+
+      &:after {
+        right: 20px;
+        top: 20px;
+      }
+
+      &__icon {
+        width: 80px;
+        height: 80px;
+
+        svg {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      &__name {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-anchors {
+    &__wrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item {
+      padding: 30px 15px;
+      border-radius: 20px;
+
+      &:after {
+        display: none;
+      }
+
+      &__icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 60px;
+        height: 60px;
+        z-index: 0;
+        opacity: 0.5;
+
+        svg {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      &__name {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        font-size: 12px;
+      }
     }
   }
 }
