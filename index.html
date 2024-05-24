@@ -4,47 +4,38 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+      content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="./resources/less/style.less"
-    />
+      href="./resources/less/style.less" />
 
     <link
       rel="apple-touch-icon"
       sizes="120x120"
-      href="/img/favicon/apple-touch-icon.png"
-    />
+      href="/img/favicon/apple-touch-icon.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/img/favicon/favicon-32x32.png"
-    />
+      href="/img/favicon/favicon-32x32.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/img/favicon/favicon-16x16.png"
-    />
+      href="/img/favicon/favicon-16x16.png" />
     <link
       rel="manifest"
-      href="/img/favicon/site.webmanifest"
-    />
+      href="/img/favicon/site.webmanifest" />
     <link
       rel="mask-icon"
       href="/img/favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
+      color="#5bbad5" />
     <meta
       name="msapplication-TileColor"
-      content="#da532c"
-    />
+      content="#da532c" />
     <meta
       name="theme-color"
-      content="#ffffff"
-    />
+      content="#ffffff" />
 
     <title>CTM</title>
   </head>
@@ -54,8 +45,7 @@
         <div class="header__wrap">
           <a
             href="javascript:;"
-            class="header__logo"
-          >
+            class="header__logo">
             <svg>
               <use xlink:href="./img/icons/sprite.svg#logo"></use>
             </svg>
@@ -71,8 +61,7 @@
             <div class="socials">
               <a
                 href="javascript:;"
-                class="socials__item"
-              >
+                class="socials__item">
                 <svg>
                   <use xlink:href="./img/icons/sprite.svg#tg"></use>
                 </svg>
@@ -82,30 +71,17 @@
 
           <div class="header__actions">
             <div class="header__search">
-              <form
-                action=""
-                class="form form_search"
-              >
-                <div class="form__item">
-                  <input
-                    type="text"
-                    class="input"
-                  />
-                </div>
-
-                <button type="submit">
-                  <svg>
-                    <use xlink:href="./img/icons/sprite.svg#search"></use>
-                  </svg>
-                </button>
-              </form>
+              <div class="search-toggle js-search-toggle">
+                <svg>
+                  <use xlink:href="./img/icons/sprite.svg#search"></use>
+                </svg>
+              </div>
             </div>
 
             <div class="header__cart">
               <a
                 href="javascript:;"
-                class="cart"
-              >
+                class="cart">
                 <svg>
                   <use xlink:href="./img/icons/sprite.svg#cart"></use>
                 </svg>
@@ -131,6 +107,21 @@
           </div>
         </div>
       </div>
+      <form
+        action=""
+        class="form form_search js-search-form">
+        <div class="form__item">
+          <input
+            type="text"
+            class="input" />
+        </div>
+
+        <button type="submit">
+          <svg>
+            <use xlink:href="./img/icons/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </form>
       <div class="menu js-mmenu">
         <ul class="list js-accordion">
           <li class="js-accordion-item">
@@ -299,6 +290,28 @@
             </ul>
           </li>
         </ul>
+
+        <ul class="langs">
+          <li class="active"><a href="javascript:;">Ru</a></li>
+          <li><a href="javascript:;">En</a></li>
+          <li><a href="javascript:;">De</a></li>
+        </ul>
+
+        <div class="socials">
+          <a
+            href="javascript:;"
+            class="socials__item">
+            <svg>
+              <use xlink:href="./img/icons/sprite.svg#tg"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="phones">
+          <a href="tel:+79999876543">+7 (999) 987 65 43</a>
+        </div>
+
+        <button class="btn btn_blue">Заказать звонок</button>
       </div>
     </header>
 
@@ -309,8 +322,7 @@
             <div class="slide__image">
               <img
                 src="./img/main-intro1.png"
-                alt=""
-              />
+                alt="" />
             </div>
 
             <div class="slide__content">
@@ -332,8 +344,7 @@
             <div class="slide__image">
               <img
                 src="./img/main-intro1.png"
-                alt=""
-              />
+                alt="" />
             </div>
 
             <div class="slide__content">
@@ -361,8 +372,7 @@
         <div class="main-anchors__wrap">
           <a
             href="javascript:;"
-            class="item"
-          >
+            class="item">
             <span class="item__icon">
               <svg>
                 <use xlink:href="./img/icons/sprite.svg#icon1"></use>
@@ -374,8 +384,7 @@
 
           <a
             href="javascript:;"
-            class="item"
-          >
+            class="item">
             <span class="item__icon">
               <svg>
                 <use xlink:href="./img/icons/sprite.svg#icon2"></use>
@@ -387,8 +396,7 @@
 
           <a
             href="javascript:;"
-            class="item"
-          >
+            class="item">
             <span class="item__icon">
               <svg>
                 <use xlink:href="./img/icons/sprite.svg#icon3"></use>
@@ -400,8 +408,7 @@
 
           <a
             href="javascript:;"
-            class="item"
-          >
+            class="item">
             <span class="item__icon">
               <svg>
                 <use xlink:href="./img/icons/sprite.svg#icon4"></use>
@@ -427,8 +434,7 @@
               <div class="item__image">
                 <img
                   src="./img/main-services1.png"
-                  alt=""
-                />
+                  alt="" />
               </div>
             </div>
 
@@ -468,24 +474,20 @@
               <!-- Может быть ссылка, а может быть просто блок -->
               <a
                 href="javascript:;"
-                class="item__image"
-              >
+                class="item__image">
                 <img
                   src="./img/main-services1.png"
-                  alt=""
-                />
+                  alt="" />
 
                 <span>Технические возможности</span>
               </a>
 
               <a
                 href="javascript:;"
-                class="item__image"
-              >
+                class="item__image">
                 <img
                   src="./img/main-services1.png"
-                  alt=""
-                />
+                  alt="" />
 
                 <span>Заводы</span>
               </a>
@@ -522,8 +524,7 @@
               <div class="item__image">
                 <img
                   src="./img/main-services1.png"
-                  alt=""
-                />
+                  alt="" />
               </div>
             </div>
 
@@ -585,24 +586,20 @@
               <!-- Может быть ссылка, а может быть просто блок -->
               <a
                 href="javascript:;"
-                class="item__image"
-              >
+                class="item__image">
                 <img
                   src="./img/main-services1.png"
-                  alt=""
-                />
+                  alt="" />
 
                 <span>Контроль качества</span>
               </a>
 
               <a
                 href="javascript:;"
-                class="item__image"
-              >
+                class="item__image">
                 <img
                   src="./img/main-services1.png"
-                  alt=""
-                />
+                  alt="" />
 
                 <span>Сопровождение</span>
               </a>
@@ -631,8 +628,7 @@
     <div class="main-image">
       <img
         src="./img/main-image.png"
-        alt=""
-      />
+        alt="" />
     </div>
 
     <div class="main-news">
@@ -647,20 +643,17 @@
           <div class="item">
             <a
               href="javascript:;"
-              class="item__image"
-            >
+              class="item__image">
               <img
                 src="./img/news-list1.png"
-                alt=""
-              />
+                alt="" />
             </a>
 
             <div class="item__content">
               <div class="item__date">24/03/24</div>
               <a
                 href="javascript:;"
-                class="item__name"
-              >
+                class="item__name">
                 Мировая премьера от Daedong: вибропогружатель с боковым захватом
               </a>
 
@@ -675,20 +668,17 @@
           <div class="item">
             <a
               href="javascript:;"
-              class="item__image"
-            >
+              class="item__image">
               <img
                 src="./img/news-list1.png"
-                alt=""
-              />
+                alt="" />
             </a>
 
             <div class="item__content">
               <div class="item__date">24/03/24</div>
               <a
                 href="javascript:;"
-                class="item__name"
-              >
+                class="item__name">
                 Мировая премьера от Daedong: вибропогружатель с боковым захватом
               </a>
 
@@ -703,20 +693,17 @@
           <div class="item">
             <a
               href="javascript:;"
-              class="item__image"
-            >
+              class="item__image">
               <img
                 src="./img/news-list1.png"
-                alt=""
-              />
+                alt="" />
             </a>
 
             <div class="item__content">
               <div class="item__date">24/03/24</div>
               <a
                 href="javascript:;"
-                class="item__name"
-              >
+                class="item__name">
                 Мировая премьера от Daedong: вибропогружатель с боковым захватом
               </a>
 
@@ -732,8 +719,6 @@
     </div>
 
     <div class="map-block">
-      <div id="map"></div>
-
       <div class="wrapper">
         <div class="plate">
           <h2 class="plate__title">Контакты</h2>
@@ -747,13 +732,11 @@
           <div class="plate__content">
             <div
               class="plate__item"
-              data-group="offices"
-            >
+              data-group="offices">
               <div
                 class="item"
                 data-id="0"
-                data-coord="59.949307774768805,30.364249982421896"
-              >
+                data-coord="59.949307774768805,30.364249982421896">
                 <div class="item__city">Санкт-Петербург</div>
 
                 <div class="item__address">
@@ -775,8 +758,7 @@
               <div
                 class="item"
                 data-id="1"
-                data-coord="55.75399399999374,37.62209300000001"
-              >
+                data-coord="55.75399399999374,37.62209300000001">
                 <div class="item__city">Москва</div>
 
                 <div class="item__address">
@@ -802,13 +784,11 @@
 
             <div
               class="plate__item"
-              data-group="productions"
-            >
+              data-group="productions">
               <div
                 class="item"
                 data-id="2"
-                data-coord="60.07633106148867,30.28906229931646"
-              >
+                data-coord="60.07633106148867,30.28906229931646">
                 <div class="item__city">Санкт-Петербург</div>
 
                 <div class="item__address">
@@ -830,8 +810,7 @@
               <div
                 class="item"
                 data-id="3"
-                data-coord="60.009013713371694,30.504668988769588"
-              >
+                data-coord="60.009013713371694,30.504668988769588">
                 <div class="item__city">Москва</div>
 
                 <div class="item__address">
@@ -857,13 +836,11 @@
 
             <div
               class="plate__item"
-              data-group="platforms"
-            >
+              data-group="platforms">
               <div
                 class="item"
                 data-id="4"
-                data-coord="59.921226202317435,30.554107465332084"
-              >
+                data-coord="59.921226202317435,30.554107465332084">
                 <div class="item__city">Санкт-Петербург</div>
 
                 <div class="item__address">
@@ -885,8 +862,7 @@
               <div
                 class="item"
                 data-id="5"
-                data-coord="59.77785661819971,30.55754069287114"
-              >
+                data-coord="59.77785661819971,30.55754069287114">
                 <div class="item__city">Москва</div>
 
                 <div class="item__address">
@@ -912,6 +888,8 @@
           </div>
         </div>
       </div>
+
+      <div id="map"></div>
     </div>
 
     <footer class="footer">
@@ -920,8 +898,7 @@
           <div class="footer__wrap">
             <a
               href="javascript:;"
-              class="footer__logo"
-            >
+              class="footer__logo">
               <svg>
                 <use xlink:href="./img/icons/sprite.svg#logo-dark"></use>
               </svg>
@@ -939,8 +916,7 @@
               <div class="socials">
                 <a
                   href="javascript:;"
-                  class="socials__item"
-                >
+                  class="socials__item">
                   <svg>
                     <use xlink:href="./img/icons/sprite.svg#tg"></use>
                   </svg>
@@ -1116,11 +1092,9 @@
 
     <script
       src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"
-      type="text/javascript"
-    ></script>
+      type="text/javascript"></script>
     <script
       type="module"
-      src="./resources/js/script.js"
-    ></script>
+      src="./resources/js/script.js"></script>
   </body>
 </html>

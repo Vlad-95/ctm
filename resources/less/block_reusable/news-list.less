@@ -48,3 +48,30 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .news-list {
+    .item {
+      &__content {
+        padding: 20px;
+      }
+
+      &__name {
+        font-size: 15px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .news-list {
+    grid-template-columns: 1fr;
+  }
+}
