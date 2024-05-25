@@ -1,8 +1,25 @@
 .text-page {
-  .intro {
-    position: relative;
+  position: relative;
 
-    &__image {
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 457px;
+    height: 941px;
+    background-image: url('/img/text-page-bg.png');
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &__intro {
+    position: relative;
+    margin-bottom: 60px;
+
+    &-image {
       position: relative;
       padding-top: 35%;
       border-radius: 30px;
@@ -19,7 +36,7 @@
       }
     }
 
-    &__title {
+    &-title {
       position: absolute;
       color: @white;
       font-size: 80px;
@@ -27,6 +44,108 @@
       margin: 0;
       bottom: 50px;
       left: 76px;
+    }
+  }
+
+  .highlight-text {
+    margin-bottom: 47px;
+  }
+
+  &__content {
+    & > .wrapper {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: -53px;
+        top: 10px;
+        width: 26px;
+        height: 26px;
+        background-image: url('/img/icons/target-blue.png');
+        background-position: center;
+        background-size: 26px 26px;
+      }
+    }
+  }
+
+  .gallery {
+    margin: 85px 0 75px;
+  }
+
+  & > .sep {
+    height: 60px;
+    max-width: 1190px;
+    margin: 84px auto -20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .text-page {
+    &__intro {
+      margin-bottom: 40px;
+
+      &-title {
+        font-size: 50px;
+        left: 40px;
+        bottom: 40px;
+      }
+    }
+
+    &__content {
+      & > .wrapper {
+        position: relative;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    .highlight-text {
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      margin: 40px 0;
+    }
+
+    & > .sep {
+      max-width: none;
+      width: calc(100% - 30px);
+      margin: 40px 15px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .text-page {
+    &__intro {
+      &-title {
+        font-size: 40px;
+        left: 20px;
+        bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-page {
+    &__intro {
+      &-image {
+        padding-top: 220px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .text-page {
+    &__intro {
+      &-title {
+        font-size: 30px;
+      }
     }
   }
 }

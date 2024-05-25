@@ -11,37 +11,10 @@
       gap: 40px 110px;
 
       & > .sep {
-        .row-align-center-mixin();
         position: absolute;
         left: 0;
         bottom: -31px;
-        width: 100%;
         height: 60px;
-        border-left: 1px solid @dark1;
-        border-right: 1px solid @dark1;
-
-        .sep__line {
-          width: 100%;
-          height: 1px;
-          background-color: @dark1;
-          position: relative;
-
-          &:before,
-          &:after {
-            content: '';
-            position: absolute;
-            left: -5px;
-            top: -2px;
-            border: 3px solid transparent;
-            border-right: 11px solid @dark1;
-          }
-
-          &:after {
-            left: auto;
-            right: -5px;
-            transform: rotate(180deg);
-          }
-        }
       }
     }
 
@@ -51,38 +24,10 @@
       position: relative;
 
       .sep {
-        .column-align-center-mixin();
         position: absolute;
         top: 0;
         right: -79px;
         width: 60px;
-        height: 100%;
-        border-top: 1px solid @dark1;
-        border-bottom: 1px solid @dark1;
-
-        .sep__line {
-          width: 1px;
-          height: 100%;
-          background-color: @dark1;
-          position: relative;
-
-          &:before,
-          &:after {
-            content: '';
-            position: absolute;
-            left: -3px;
-            top: -3px;
-            border: 3px solid transparent;
-            border-bottom: 11px solid @dark1;
-          }
-
-          &:after {
-            left: -3px;
-            top: auto;
-            bottom: -5px;
-            transform: rotate(180deg);
-          }
-        }
       }
     }
 
