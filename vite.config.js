@@ -27,6 +27,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'about.html'),
         about_docs: resolve(__dirname, 'about_docs.html'),
+        about_team: resolve(__dirname, 'about_team.html'),
       },
 
       output: {
