@@ -34,10 +34,68 @@
   }
 }
 
+.page-title {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 32px;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 23px;
+    width: 20px;
+    height: 1px;
+    background-color: @dark;
+  }
+
+  &:after {
+    transform: rotate(90deg);
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    color: @blue;
+  }
+
+  &_big {
+    &:before,
+    &:after {
+      top: 38px;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .page-title {
+    &:before,
+    &:after {
+      top: 23px !important;
+    }
+
+    h1 {
+      font-size: 40px !important;
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   .block-title {
     h2 {
       font-size: 25px;
+    }
+  }
+
+  .page-title {
+    h1 {
+      font-size: 30px !important;
     }
   }
 }

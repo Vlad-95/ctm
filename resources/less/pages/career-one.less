@@ -1,0 +1,141 @@
+.career-one {
+  padding: 14px 0 0;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 457px;
+    height: 941px;
+    background-image: url('/img/text-page-bg.png');
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &__salary {
+    font-size: 25px;
+    font-weight: 900;
+    padding-left: 70px;
+    margin-bottom: 8px;
+  }
+
+  &__label {
+    .row-align-start-mixin();
+    flex-wrap: wrap;
+    gap: 5px 13px;
+    padding-left: 70px;
+    margin-bottom: 59px;
+
+    p {
+      margin: 0;
+      padding-right: 13px;
+      position: relative;
+      font-size: 15px;
+      font-weight: 300;
+
+      &:not(:last-child) {
+        &:after {
+          content: '|';
+          position: absolute;
+          right: -1px;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  &__block {
+    margin-bottom: 43px;
+
+    &-name {
+      font-size: 20px;
+      font-weight: 500;
+      padding-left: 70px;
+      position: relative;
+      margin-bottom: 23px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: -1px;
+        width: 26px;
+        height: 26px;
+        background-image: url('/img/icons/target-blue.png');
+        background-size: 26px 26px;
+        background-position: center;
+      }
+    }
+
+    .wysiwyg {
+      p {
+        line-height: 1.5;
+      }
+
+      ol,
+      ul {
+        li {
+          line-height: 1.5;
+          padding-left: 70px;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      ul {
+        li {
+          &:before {
+            left: 7px;
+            top: 15px;
+            width: 15px;
+            height: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  &__foot {
+    .row-align-start-mixin();
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-top: 76px;
+  }
+
+  &__action {
+    background-color: @blue;
+    color: @white;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 100px;
+    padding: 13px 50px;
+  }
+
+  &__back {
+    background-color: fade(@blue, 10%);
+    color: @dark;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 100px;
+    margin-left: auto;
+    padding: 13px 27px;
+  }
+
+  & > .sep {
+    height: 60px;
+    max-width: 1190px;
+    margin: 20px auto -20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .career-one {
+  }
+}
