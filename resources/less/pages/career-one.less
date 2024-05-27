@@ -137,5 +137,75 @@
 
 @media screen and (max-width: 1200px) {
   .career-one {
+    padding: 0;
+
+    &__salary {
+      padding-left: 40px;
+      font-size: 20px;
+    }
+
+    &__label {
+      padding-left: 40px;
+      margin-bottom: 40px;
+    }
+
+    &__block {
+      margin-bottom: 40px;
+      &-name {
+        padding-left: 40px;
+        margin-bottom: 15px;
+      }
+
+      .wysiwyg {
+        ol,
+        ul {
+          li {
+            padding-left: 40px;
+          }
+        }
+
+        ul {
+          li {
+            &:before {
+              top: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &__foot {
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 0;
+    }
+
+    &__action {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+
+    &__back {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+
+    & > .sep {
+      max-width: none;
+      width: calc(100% - 30px);
+      margin: 40px 15px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .career-one {
+    &__foot {
+      .column-align-center-mixin();
+    }
+
+    &__back {
+      margin-left: 0;
+    }
   }
 }

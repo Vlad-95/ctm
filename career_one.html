@@ -395,7 +395,8 @@
         <div class="career-one__foot">
           <a
             href="javascript:;"
-            class="career-one__action">
+            class="career-one__action"
+            data-trigger="career">
             Откликнуться
           </a>
 
@@ -608,10 +609,130 @@
         </div>
       </div>
     </footer>
+    <div
+      class="modal-container"
+      data-modal="career">
+      <div class="modal-wrap">
+        <div class="modal">
+          <div class="modal__head">
+            <h2 class="modal__title">
+              Слесарь по ремонту горного оборудования
+            </h2>
+            <h3 class="modal__subtitle">Южно-Сахалинск</h3>
+          </div>
+          <div class="modal__close js-modal-close"></div>
 
-    <script
-      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"
-      type="text/javascript"></script>
+          <form
+            action=""
+            class="form form_career">
+            <div class="form__block">
+              <div class="form__row form__row_3to1">
+                <div class="form__item">
+                  <span class="name">ФИО *</span>
+                  <input
+                    type="text"
+                    class="input" />
+                </div>
+
+                <div class="form__item">
+                  <span class="name">Дата рождения *</span>
+                  <input
+                    type="text"
+                    class="input js-birthdate-calendar"
+                    readonly
+                    id="test" />
+                </div>
+              </div>
+
+              <div class="form__item">
+                <span class="name">Место проживания *</span>
+                <input
+                  type="text"
+                  class="input" />
+              </div>
+
+              <div class="form__row form__row_3to1">
+                <div class="form__item">
+                  <span class="name">Email</span>
+                  <input
+                    type="text"
+                    class="input" />
+                </div>
+                <div class="form__item">
+                  <span class="name">Телефон *</span>
+                  <input
+                    type="text"
+                    class="input js-phone" />
+                </div>
+              </div>
+            </div>
+            <div class="form__block">
+              <div class="form__item">
+                <span class="name">Образование / Квалификация *</span>
+                <input
+                  type="text"
+                  class="input" />
+              </div>
+
+              <div class="form__item">
+                <span class="name">Последнее место работы и должность *</span>
+                <input
+                  type="text"
+                  class="input" />
+              </div>
+
+              <div class="form__item">
+                <span class="name">Комментарий</span>
+                <textarea
+                  name=""
+                  id=""
+                  class="textarea"></textarea>
+              </div>
+            </div>
+
+            <div class="form__footer">
+              <div class="form__item">
+                <span class="name">Готовность к командировакм</span>
+                <div class="form__radio">
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="trip"
+                      value="1" />
+                    <p>Готов</p>
+                  </label>
+
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="trip"
+                      value="0" />
+                    <p>Не готов</p>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form__checkbox">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>
+                    — я соглашаюсь с&#32;
+                    <a href="javascript:;">Обработкой персональных данных</a>
+                  </p>
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="submit">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script
       type="module"
       src="./resources/js/script.js"></script>
