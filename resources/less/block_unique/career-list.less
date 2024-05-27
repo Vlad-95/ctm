@@ -1,0 +1,130 @@
+.career-list {
+  .item {
+    .row-align-start-mixin();
+    border-top: 1px solid @gray3;
+    position: relative;
+    padding: 18px 135px 21px 70px;
+
+    &:before {
+      content: '';
+      width: 26px;
+      height: 26px;
+      background-image: url('/img/icons/target-blue.png');
+      background-size: 26px 26px;
+      position: absolute;
+      left: 2px;
+      top: 17px;
+      z-index: 2;
+    }
+
+    &__head {
+    }
+
+    &__name {
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    &__label {
+      .row-align-start-mixin();
+      flex-wrap: wrap;
+      gap: 5px 13px;
+
+      p {
+        margin: 0;
+        padding-right: 13px;
+        position: relative;
+        font-size: 15px;
+        font-weight: 300;
+
+        &:not(:last-child) {
+          &:after {
+            content: '|';
+            position: absolute;
+            right: -1px;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    &__salary {
+      margin-left: auto;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    &__link {
+      position: absolute;
+      right: 19px;
+      top: 17px;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .career-list {
+    .item {
+      padding-left: 50px;
+      padding-bottom: 18px;
+
+      &:before {
+        top: 14px;
+      }
+
+      &__name {
+        font-size: 15px;
+      }
+
+      &__label {
+        p {
+          font-size: 12px;
+        }
+      }
+
+      &__salary {
+        font-size: 15px;
+      }
+
+      &__link {
+        top: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .career-list {
+    .item {
+      padding-right: 100px;
+
+      &__link {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .career-list {
+    .item {
+      .column-align-start-mixin();
+      gap: 20px 0;
+      padding-right: 0;
+
+      &__salary {
+        margin-left: 0;
+      }
+
+      &__link {
+        top: auto;
+        bottom: 15px;
+        right: 0;
+      }
+    }
+  }
+}

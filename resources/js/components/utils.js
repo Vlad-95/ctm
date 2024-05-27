@@ -68,3 +68,29 @@ export function fadeOut(element, duration) {
     element.style.display = 'none';
   });
 }
+
+export function numberWithSpaces(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
+
+export function peopleNameSep(item) {
+  const name = item.textContent.trim();
+  const nameArr = name.split(' ');
+  return `${nameArr[0]}</br>${nameArr[1]} ${nameArr[2]}`;
+}
+
+export const utils = () => {
+  // Перенос фамилии у членов команды
+  if (document.querySelectorAll('.js-name-sep').length) {
+    document.querySelectorAll('.js-name-sep').forEach((item) => {
+      item.innerHTML = peopleNameSep(item);
+    });
+  }
+
+  // Числа с разделением на разряды
+  if (document.querySelectorAll('.js-digit-number').length) {
+    document.querySelectorAll('.js-digit-number').forEach((item) => {
+      item.textContent = numberWithSpaces(item.textContent);
+    });
+  }
+};
