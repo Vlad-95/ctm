@@ -35,6 +35,7 @@ export default defineConfig({
         press_about_us: resolve(__dirname, 'press_about_us.html'),
         news_one: resolve(__dirname, 'news_one.html'),
         press_service: resolve(__dirname, 'press_service.html'),
+        products: resolve(__dirname, 'products.html'),
       },
 
       output: {

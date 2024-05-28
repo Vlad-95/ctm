@@ -1,0 +1,78 @@
+.products-cats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 63px 30px;
+
+  .item {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 26px;
+      height: 26px;
+      background-image: url('/img/icons/target-blue.png');
+      background-size: 26px 26px;
+    }
+
+    &__image {
+      display: block;
+      position: relative;
+      padding-top: 100%;
+      overflow: hidden;
+      border-radius: 30px;
+      background-color: @gray4;
+      margin-bottom: 22px;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        filter: grayscale(100%);
+        transition: 0.3s;
+      }
+    }
+
+    &__name {
+      display: block;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &:hover {
+      .item__image {
+        img {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .products-cats {
+    .item {
+      &__name {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .products-cats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .products-cats {
+    grid-template-columns: 1fr;
+  }
+}
