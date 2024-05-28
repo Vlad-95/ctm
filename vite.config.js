@@ -32,6 +32,7 @@ export default defineConfig({
         career_one: resolve(__dirname, 'career_one.html'),
         clients: resolve(__dirname, 'clients.html'),
         contacts: resolve(__dirname, 'contacts.html'),
+        press_about_us: resolve(__dirname, 'press_about_us.html'),
       },
 
       output: {

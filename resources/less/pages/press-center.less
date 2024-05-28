@@ -1,0 +1,21 @@
+.press-center {
+  .page-title {
+    margin-bottom: 40px;
+  }
+
+  & > .sep {
+    height: 60px;
+    max-width: 1190px;
+    margin: 21px auto -20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .press-center {
+    & > .sep {
+      max-width: none;
+      width: calc(100% - 30px);
+      margin: 21px 15px 0;
+    }
+  }
+}

@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./resources/less/style.less" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/img/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png" />
+    <link
+      rel="manifest"
+      href="/img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5" />
+    <meta
+      name="msapplication-TileColor"
+      content="#da532c" />
+    <meta
+      name="theme-color"
+      content="#ffffff" />
+
+    <title>CTM</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__wrap">
+          <a
+            href="javascript:;"
+            class="header__logo">
+            <svg>
+              <use xlink:href="./img/icons/sprite.svg#logo-dark"></use>
+            </svg>
+          </a>
+
+          <div class="header__contacts">
+            <div class="header__phones">
+              <a href="tel:+79999876543">+7 (999) 987 65 43</a>
+            </div>
+
+            <button class="btn btn_blue">Заказать звонок</button>
+
+            <div class="socials">
+              <a
+                href="javascript:;"
+                class="socials__item">
+                <svg>
+                  <use xlink:href="./img/icons/sprite.svg#tg"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="header__actions">
+            <div class="header__search">
+              <div class="search-toggle js-search-toggle">
+                <svg>
+                  <use xlink:href="./img/icons/sprite.svg#search"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="header__cart">
+              <a
+                href="javascript:;"
+                class="cart">
+                <svg>
+                  <use xlink:href="./img/icons/sprite.svg#cart"></use>
+                </svg>
+
+                <span>5</span>
+              </a>
+            </div>
+
+            <div class="header__langs">
+              <div class="current">Ru</div>
+
+              <div class="dropdown">
+                <ul class="dropdown__list">
+                  <li><a href="javascript:;">En</a></li>
+                  <li><a href="javascript:;">De</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="header__burger">
+              <div class="burger"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form
+        action=""
+        class="form form_search js-search-form">
+        <div class="form__item">
+          <input
+            type="text"
+            class="input" />
+        </div>
+
+        <button type="submit">
+          <svg>
+            <use xlink:href="./img/icons/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+      <div class="menu js-mmenu">
+        <ul class="list js-accordion">
+          <li class="js-accordion-item">
+            <span>Компания</span>
+            <div class="toggle js-accordion-toggle">
+              <svg>
+                <use xlink:href="./img/icons/sprite.svg#chevron"></use>
+              </svg>
+            </div>
+            <ul class="dropdown js-accordion-dropdown">
+              <li>
+                <a href="javascript:;">О нас</a>
+              </li>
+              <li>
+                <a href="javascript:;">Миссия и стратегия</a>
+              </li>
+              <li>
+                <a href="javascript:;">Команда</a>
+              </li>
+              <li>
+                <a href="javascript:;">Устойчивое развитие</a>
+              </li>
+              <li>
+                <a href="javascript:;">Закупки</a>
+              </li>
+              <li>
+                <a href="javascript:;">Документы</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="js-accordion-item">
+            <span>Разработка</span>
+            <div class="toggle js-accordion-toggle">
+              <svg>
+                <use xlink:href="./img/icons/sprite.svg#chevron"></use>
+              </svg>
+            </div>
+            <ul class="dropdown js-accordion-dropdown">
+              <li>
+                <a href="javascript:;">Инжиниринговый центр</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Конструкторский центр</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Возможноси проектирования</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="js-accordion-item">
+            <span>Производство</span>
+            <div class="toggle js-accordion-toggle">
+              <svg>
+                <use xlink:href="./img/icons/sprite.svg#chevron"></use>
+              </svg>
+            </div>
+            <ul class="dropdown js-accordion-dropdown">
+              <li>
+                <a href="javascript:;">Технические возможности</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Заводы</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="js-accordion-item">
+            <span>Сервис</span>
+            <div class="toggle js-accordion-toggle">
+              <svg>
+                <use xlink:href="./img/icons/sprite.svg#chevron"></use>
+              </svg>
+            </div>
+            <ul class="dropdown js-accordion-dropdown">
+              <li>
+                <a href="javascript:;">Контроль качества</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Сопровождение</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="js-accordion-item">
+            <span>Пресс-центр</span>
+            <div class="toggle js-accordion-toggle">
+              <svg>
+                <use xlink:href="./img/icons/sprite.svg#chevron"></use>
+              </svg>
+            </div>
+            <ul class="dropdown js-accordion-dropdown">
+              <li>
+                <a href="javascript:;">Новости</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">СМИ о нас</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Пресс-служба</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="js-accordion-item">
+            <span>Информация</span>
+            <div class="toggle js-accordion-toggle">
+              <svg>
+                <use xlink:href="./img/icons/sprite.svg#chevron"></use>
+              </svg>
+            </div>
+            <ul class="dropdown js-accordion-dropdown">
+              <li>
+                <a href="javascript:;">Клиенты</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Карьера</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Контакты</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="js-accordion-item">
+            <!-- ТУТ ССЫЛКА. Это не ошибка -->
+            <a href="javascript:">Продукция</a>
+            <div class="toggle js-accordion-toggle">
+              <svg>
+                <use xlink:href="./img/icons/sprite.svg#chevron"></use>
+              </svg>
+            </div>
+            <ul class="dropdown js-accordion-dropdown">
+              <li>
+                <a href="javascript:;">Буровой инструмент</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Для буровых станков</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Режущий инструмент</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Для карьерной техники</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Очистители скребковые</a>
+              </li>
+
+              <li>
+                <a href="javascript:;">Гидроцилиндры</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="langs">
+          <li class="active"><a href="javascript:;">Ru</a></li>
+          <li><a href="javascript:;">En</a></li>
+          <li><a href="javascript:;">De</a></li>
+        </ul>
+
+        <div class="socials">
+          <a
+            href="javascript:;"
+            class="socials__item">
+            <svg>
+              <use xlink:href="./img/icons/sprite.svg#tg"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="phones">
+          <a href="tel:+79999876543">+7 (999) 987 65 43</a>
+        </div>
+
+        <button class="btn btn_blue">Заказать звонок</button>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <ol class="breadcrumbs">
+        <li><a href="javascript:;">[ Главная ]</a></li>
+        <li><a href="javascript:;">[ Пресс-центр ]</a></li>
+        <li><span>[ Клиенты ]</span></li>
+      </ol>
+    </div>
+    <div class="press-center">
+      <div class="wrapper">
+        <div class="page-title">
+          <h1>СМИ о нас</h1>
+        </div>
+
+        <div class="news-list">
+          <div class="item">
+            <a
+              href="javascript:;"
+              class="item__image">
+              <img
+                src="./img/news-list1.png"
+                alt="" />
+            </a>
+
+            <div class="item__content">
+              <div class="item__date">24/03/24</div>
+              <a
+                href="javascript:;"
+                class="item__name">
+                Мировая премьера от Daedong: вибропогружатель с боковым захватом
+              </a>
+
+              <a
+                href="javascript:;"
+                class="item__link btn btn_blue"
+                >Подробнее</a
+              >
+
+              <!-- На этой странице добавлятется источник -->
+              <div class="item__source">
+                Журнал «Глобус» № 1 (80) апрель 2024
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a
+              href="javascript:;"
+              class="item__image">
+              <img
+                src="./img/news-list1.png"
+                alt="" />
+            </a>
+
+            <div class="item__content">
+              <div class="item__date">24/03/24</div>
+              <a
+                href="javascript:;"
+                class="item__name">
+                Мировая премьера от Daedong: вибропогружатель с боковым захватом
+              </a>
+
+              <a
+                href="javascript:;"
+                class="item__link btn btn_blue"
+                >Подробнее</a
+              >
+
+              <!-- На этой странице добавлятется источник -->
+              <div class="item__source">
+                Журнал «Глобус» № 1 (80) апрель 2024
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a
+              href="javascript:;"
+              class="item__image">
+              <img
+                src="./img/news-list1.png"
+                alt="" />
+            </a>
+
+            <div class="item__content">
+              <div class="item__date">24/03/24</div>
+              <a
+                href="javascript:;"
+                class="item__name">
+                Мировая премьера от Daedong: вибропогружатель с боковым захватом
+              </a>
+
+              <a
+                href="javascript:;"
+                class="item__link btn btn_blue"
+                >Подробнее</a
+              >
+
+              <!-- На этой странице добавлятется источник -->
+              <div class="item__source">
+                Журнал «Глобус» № 1 (80) апрель 2024
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a
+              href="javascript:;"
+              class="item__image">
+              <img
+                src="./img/news-list1.png"
+                alt="" />
+            </a>
+
+            <div class="item__content">
+              <div class="item__date">24/03/24</div>
+              <a
+                href="javascript:;"
+                class="item__name">
+                Мировая премьера от Daedong: вибропогружатель с боковым захватом
+              </a>
+
+              <a
+                href="javascript:;"
+                class="item__link btn btn_blue"
+                >Подробнее</a
+              >
+
+              <!-- На этой странице добавлятется источник -->
+              <div class="item__source">
+                Журнал «Глобус» № 1 (80) апрель 2024
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <div class="wrapper">
+          <div class="pagination__wrap">
+            <div class="pagination__pages">
+              <a href="javascript:;">1</a>
+              <a
+                href="javascript:;"
+                class="dots"
+                >…</a
+              >
+              <a href="javascript:;">6</a>
+              <a
+                href="javascript:;"
+                class="current"
+                >7</a
+              >
+              <a href="javascript:;">8</a>
+              <a
+                href="javascript:;"
+                class="dots"
+                >…</a
+              >
+              <a href="javascript:;">15</a>
+            </div>
+
+            <div class="pagination__arrows">
+              <a
+                href="javascript:;"
+                class="prev">
+                <img
+                  src="/img/icons/arrow1.png"
+                  alt="" />
+              </a>
+              <a
+                href="javascript:;"
+                class="next">
+                <img
+                  src="/img/icons/arrow1.png"
+                  alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sep sep_horizontal">
+        <div class="sep__line"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="wrapper">
+          <div class="footer__wrap">
+            <a
+              href="javascript:;"
+              class="footer__logo">
+              <svg>
+                <use xlink:href="./img/icons/sprite.svg#logo-dark"></use>
+              </svg>
+            </a>
+
+            <div class="footer__contacts">
+              <div class="footer__phones">
+                <a href="tel:+79999876543">+7 (999) 987 65 43</a>
+              </div>
+
+              <div class="footer__mails">
+                <a href="mailto:mail@example.ru">mail@example.ru</a>
+              </div>
+
+              <div class="socials">
+                <a
+                  href="javascript:;"
+                  class="socials__item">
+                  <svg>
+                    <use xlink:href="./img/icons/sprite.svg#tg"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__menu">
+              <div class="plate">
+                <p class="plate__head">Компания</p>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="javascript:;">О нас</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Миссия и стратегия</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Команда</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Устойчивое развитие</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Закупки</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Документы</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="plate">
+                <p class="plate__head">Разработка</p>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="javascript:;">Инжиниринговый центр</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Конструкторский отдел</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Возможноси проектирования</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="plate">
+                <p class="plate__head">Производство</p>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="javascript:;">Технические возможности</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Заводы</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="plate">
+                <p class="plate__head">Сервис</p>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="javascript:;">Контроль качества</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Сопровождение</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="plate">
+                <p class="plate__head">Пресс-центр</p>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="javascript:;">Новости</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">СМИ о нас</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Пресс-служба</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="plate">
+                <p class="plate__head">Информация</p>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="javascript:;">Клиенты</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Карьера</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Для элемента "Продукция" добавляется класс "plate_catalog" -->
+              <div class="plate plate_catalog">
+                <!-- ТУТ ССЫЛКА. Это не ошибка -->
+                <a
+                  href="javascript:;"
+                  class="plate__head"
+                  >Продукция</a
+                >
+
+                <!-- Для элемента "Продукция" добавляется класс "menu_catalog" -->
+                <ul class="menu menu_catalog">
+                  <li class="menu__item">
+                    <a href="javascript:;">Буровой инструмент</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Для буровых станков</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Режущий инструмент</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Для карьерной техники</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Очистители скребковые</a>
+                  </li>
+
+                  <li class="menu__item">
+                    <a href="javascript:;">Гидроцилиндры</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="wrapper">
+          <div class="footer__wrap">
+            <div class="footer__copyright">© CTM, 2024</div>
+
+            <div class="footer__links">
+              <a href="javascript:;">Карта сайта</a>
+              <a href="javascript:;">Обработка персональных данных</a>
+            </div>
+
+            <div class="siluet">
+              Создание сайта: <a href="javascript:;">Студия Слиуэт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="./resources/js/script.js"></script>
+  </body>
+</html>
