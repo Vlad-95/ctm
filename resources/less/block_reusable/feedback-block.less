@@ -1,0 +1,41 @@
+.feedback-block {
+  background-color: @gray;
+  border-top: 10px solid @white;
+  padding: 68px 0 84px;
+
+  .block-title {
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 41px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -68px;
+      top: 13px;
+      width: 26px;
+      height: 26px;
+      background-image: url('/img/icons/target-blue.png');
+      background-size: 26px 26px;
+      z-index: 2;
+    }
+
+    h2 {
+      text-transform: none;
+      font-size: 40px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .feedback-block {
+    padding: 40px 0;
+
+    .block-title {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

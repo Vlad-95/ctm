@@ -36,6 +36,11 @@
 
   &__footer {
     .row-align-start-mixin();
+    margin-top: 40px;
+
+    .submit {
+      margin-left: auto;
+    }
   }
 
   .input {
@@ -45,6 +50,7 @@
     border: 1px solid lighten(@dark, 70%);
     padding: 10px;
     font-size: 15px;
+    background-color: transparent;
   }
 
   .textarea {
@@ -55,6 +61,7 @@
     padding: 10px;
     font-size: 15px;
     resize: none;
+    background-color: transparent;
   }
 
   .radio {
@@ -180,6 +187,7 @@
 
       .submit {
         margin-bottom: 6px;
+        margin-left: 0;
       }
     }
   }
@@ -226,6 +234,10 @@
         font-size: 12px;
         padding-left: 0;
       }
+    }
+
+    &__footer {
+      margin-top: 20px;
     }
 
     .input {
@@ -286,6 +298,11 @@
   .form {
     &__row {
       grid-template-columns: 1fr;
+    }
+
+    &__footer {
+      .column-align-start-mixin();
+      gap: 10px;
     }
 
     &_career {
