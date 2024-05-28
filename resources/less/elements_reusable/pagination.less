@@ -1,8 +1,13 @@
 .pagination {
+  .row-align-center-mixin();
   padding-top: 50px;
 
-  &__wrap {
-    .row-align-center-mixin();
+  &__back {
+    background-color: lighten(@blue, 55%);
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 100px;
+    padding: 13px 22px;
   }
 
   &__pages {
@@ -58,6 +63,11 @@
 
 @media screen and (max-width: 1200px) {
   .pagination {
+    &__back {
+      font-size: 15px;
+      padding: 11px 15px;
+    }
+
     &__pages {
       gap: 10px;
 
@@ -81,8 +91,11 @@
 
 @media screen and (max-width: 576px) {
   .pagination {
-    &__wrap {
-      .column-align-center-mixin();
+    .column-align-center-mixin();
+
+    &__back {
+      font-size: 12px;
+      padding: 10px 15px;
     }
 
     &__pages {
@@ -98,6 +111,14 @@
 
     &__arrows {
       display: none;
+    }
+
+    &_simple {
+      .row-align-center-mixin();
+
+      .pagination__arrows {
+        .row-align-center-mixin();
+      }
     }
   }
 }

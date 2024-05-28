@@ -5,6 +5,7 @@ import { sliders } from './components/sliders';
 import { map } from './components/map';
 import { modal } from './components/modal';
 import { form } from './components/form';
+import { Fancybox } from '@fancyapps/ui';
 
 document.addEventListener('DOMContentLoaded', function () {
   utils();
@@ -14,4 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
   map();
   modal();
   form();
+
+  Fancybox.bind('[data-fancybox]', {});
 });

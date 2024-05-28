@@ -33,6 +33,7 @@ export default defineConfig({
         clients: resolve(__dirname, 'clients.html'),
         contacts: resolve(__dirname, 'contacts.html'),
         press_about_us: resolve(__dirname, 'press_about_us.html'),
+        news_one: resolve(__dirname, 'news_one.html'),
       },
 
       output: {

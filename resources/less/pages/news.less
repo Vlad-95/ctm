@@ -1,0 +1,37 @@
+.news {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 457px;
+    height: 941px;
+    background-image: url('/img/text-page-bg.png');
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .page-title {
+    margin-bottom: 40px;
+  }
+
+  & > .sep {
+    height: 60px;
+    max-width: 1190px;
+    margin: 21px auto -20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .news {
+    & > .sep {
+      max-width: none;
+      width: calc(100% - 30px);
+      margin: 21px 15px 0;
+    }
+  }
+}

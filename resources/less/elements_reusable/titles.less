@@ -69,6 +69,7 @@
 
     h1 {
       font-size: 60px;
+      max-width: 992px;
     }
   }
 }
@@ -104,6 +105,11 @@
   }
 
   .page-title {
+    &:before,
+    &:after {
+      top: 16px !important;
+    }
+
     h1 {
       font-size: 30px !important;
     }
