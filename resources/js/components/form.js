@@ -18,5 +18,13 @@ export const form = () => {
     document.querySelectorAll('.js-phone').forEach((item) => {
       new Inputmask('+7 (999) 999-99-99').mask(item);
     });
+
+    // показ имени файла
+    document.querySelectorAll('.js-file').forEach((item) => {
+      item.addEventListener('change', (e) => {
+        e.target.closest('.file').querySelector('p').textContent =
+          e.target.files[0].name;
+      });
+    });
   }
 };
