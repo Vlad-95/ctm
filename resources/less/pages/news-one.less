@@ -55,6 +55,10 @@
     & > .wrapper {
       position: relative;
 
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
       &:before {
         content: '';
         position: absolute;
@@ -135,6 +139,10 @@
     &__content {
       & > .wrapper {
         position: relative;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
 
         &:before {
           display: none;

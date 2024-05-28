@@ -34,6 +34,7 @@ export default defineConfig({
         contacts: resolve(__dirname, 'contacts.html'),
         press_about_us: resolve(__dirname, 'press_about_us.html'),
         news_one: resolve(__dirname, 'news_one.html'),
+        press_service: resolve(__dirname, 'press_service.html'),
       },
 
       output: {
