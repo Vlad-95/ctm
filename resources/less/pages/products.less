@@ -1,4 +1,4 @@
-.news-page {
+.products-page {
   position: relative;
 
   &:after {
@@ -15,23 +15,41 @@
     z-index: -1;
   }
 
-  .page-title {
-    margin-bottom: 40px;
+  .page-intro {
+    margin-bottom: 60px;
+  }
+
+  .highlight-text {
+    margin-bottom: 47px;
   }
 
   & > .sep {
     height: 60px;
     max-width: 1190px;
-    margin: 21px auto -20px;
+    margin: 84px auto -20px;
+  }
+}
+
+.products-list {
+  .page-intro {
+    margin-bottom: 60px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .news-page {
+  .products-page {
+    .page-intro {
+      margin-bottom: 40px;
+    }
+
+    .highlight-text {
+      margin-bottom: 40px;
+    }
+
     & > .sep {
       max-width: none;
       width: calc(100% - 30px);
-      margin: 21px 15px 0;
+      margin: 40px 15px 0;
     }
   }
 }

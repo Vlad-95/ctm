@@ -1,3 +1,35 @@
+.career-page {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 457px;
+    height: 941px;
+    background-image: url('/img/text-page-bg.png');
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .page-intro {
+    margin-bottom: 60px;
+  }
+
+  .highlight-text {
+    margin-bottom: 47px;
+  }
+
+  & > .sep {
+    height: 60px;
+    max-width: 1190px;
+    margin: 84px auto -20px;
+  }
+}
+
 .career-one {
   padding: 14px 0 0;
   position: relative;
@@ -136,6 +168,22 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .career {
+    .page-intro {
+      margin-bottom: 40px;
+    }
+
+    .highlight-text {
+      margin-bottom: 40px;
+    }
+
+    & > .sep {
+      max-width: none;
+      width: calc(100% - 30px);
+      margin: 40px 15px 0;
+    }
+  }
+
   .career-one {
     padding: 0;
 

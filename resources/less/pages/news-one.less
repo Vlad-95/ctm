@@ -26,24 +26,15 @@
     margin-bottom: 58px;
   }
 
-  &__intro {
-    position: relative;
+  .page-intro {
     margin-bottom: 60px;
 
-    &-image {
+    &__image {
       position: relative;
       padding-top: 40%;
       border-radius: 30px;
       overflow: hidden;
-
-      img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+      filter: none;
     }
   }
 
@@ -132,7 +123,7 @@
       font-size: 15px;
     }
 
-    &__intro {
+    .page-intro {
       margin-bottom: 40px;
     }
 
@@ -177,7 +168,7 @@
 
 @media screen and (max-width: 768px) {
   .news-one {
-    &__intro {
+    .page-intro {
       &-image {
         padding-top: 220px;
       }
