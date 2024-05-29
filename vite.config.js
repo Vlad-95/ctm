@@ -37,6 +37,7 @@ export default defineConfig({
         press_service: resolve(__dirname, 'press_service.html'),
         products: resolve(__dirname, 'products.html'),
         products_list: resolve(__dirname, 'products_list.html'),
+        search_result: resolve(__dirname, 'search_result.html'),
       },
 
       output: {
