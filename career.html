@@ -66,7 +66,12 @@
               <a href="tel:+79999876543">+7 (999) 987 65 43</a>
             </div>
 
-            <button class="btn btn_blue">Заказать звонок</button>
+            <button
+              class="btn btn_blue"
+              data-trigger="callback"
+            >
+              Заказать звонок
+            </button>
 
             <div class="socials">
               <a
@@ -326,7 +331,12 @@
           <a href="tel:+79999876543">+7 (999) 987 65 43</a>
         </div>
 
-        <button class="btn btn_blue">Заказать звонок</button>
+        <button
+          class="btn btn_blue"
+          data-trigger="callback"
+        >
+          Заказать звонок
+        </button>
       </div>
     </header>
 
@@ -605,6 +615,70 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="modal-container"
+      data-modal="callback"
+    >
+      <div class="modal-wrap">
+        <div class="modal modal_small">
+          <div class="modal__head">
+            <h2 class="modal__title">Заказать звонок</h2>
+          </div>
+          <div class="modal__close js-modal-close"></div>
+
+          <form
+            action=""
+            class="form form_callback"
+          >
+            <div class="form__row form__row_3to1">
+              <div class="form__item">
+                <span class="name">Имя *</span>
+                <input
+                  type="text"
+                  class="input"
+                />
+              </div>
+
+              <div class="form__item">
+                <span class="name">Телефон *</span>
+                <input
+                  type="text"
+                  class="input js-phone"
+                />
+              </div>
+            </div>
+            <div class="form__item">
+              <span class="name">Комментарий</span>
+              <textarea
+                name=""
+                id=""
+                class="textarea"
+              ></textarea>
+            </div>
+
+            <div class="form__footer">
+              <div class="form__checkbox">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>
+                    — я соглашаюсь с&#32;
+                    <a href="javascript:;">Обработкой персональных данных</a>
+                  </p>
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="submit"
+              >
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <script
       type="module"
