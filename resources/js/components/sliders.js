@@ -31,4 +31,31 @@ export const sliders = () => {
       },
     },
   });
+
+  const productsSlider = new Swiper('.js-products-slider', {
+    modules: [Navigation],
+    slidesPerView: 2,
+    spaceBetween: 5,
+    navigation: {
+      nextEl: '.products-slider__arrow.next',
+      prevEl: '.products-slider__arrow.prev',
+    },
+    breakpoints: {
+      401: {
+        slidesPerView: 3,
+      },
+      577: {
+        slidesPerView: 4,
+      },
+      769: {
+        slidesPerView: 5,
+      },
+      993: {
+        slidesPerView: 6,
+      },
+      1201: {
+        slidesPerView: 7,
+      },
+    },
+  });
 };
