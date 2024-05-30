@@ -58,4 +58,32 @@ export const sliders = () => {
       },
     },
   });
+
+  const factorySliders = document.querySelectorAll('.js-factory-slider');
+  if (factorySliders.length) {
+    factorySliders.forEach((item) => {
+      const itemParent = item.closest('.item__slider');
+
+      new Swiper(item, {
+        modules: [Navigation],
+        slidesPerView: 2,
+        spaceBetween: 5,
+        navigation: {
+          nextEl: itemParent.querySelector('.arrow.next'),
+          prevEl: itemParent.querySelector('.arrow.prev'),
+        },
+        breakpoints: {
+          577: {
+            slidesPerView: 3,
+          },
+          769: {
+            slidesPerView: 4,
+          },
+          1201: {
+            slidesPerView: 5,
+          },
+        },
+      });
+    });
+  }
 };

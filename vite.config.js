@@ -38,6 +38,7 @@ export default defineConfig({
         products: resolve(__dirname, 'products.html'),
         products_list: resolve(__dirname, 'products_list.html'),
         search_result: resolve(__dirname, 'search_result.html'),
+        factory: resolve(__dirname, 'factory.html'),
       },
 
       output: {

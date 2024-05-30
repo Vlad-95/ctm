@@ -13,8 +13,8 @@ export function slideDown(target, duration) {
   target.offsetHeight;
   target.style.boxSizing = 'border-box';
   target.style.transitionProperty = 'height, margin, padding';
-  target.style.transitionDuration = duration + 'ms';
-  target.style.height = height + 'px';
+  target.style.transitionDuration = `${duration}ms`;
+  target.style.height = `${height}px`;
   target.style.removeProperty('padding-top');
   target.style.removeProperty('padding-bottom');
   target.style.removeProperty('margin-top');
@@ -29,9 +29,9 @@ export function slideDown(target, duration) {
 
 export function slideUp(target, duration) {
   target.style.transitionProperty = 'height, margin, padding';
-  target.style.transitionDuration = duration + 'ms';
+  target.style.transitionDuration = `${duration}ms`;
   target.style.boxSizing = 'border-box';
-  target.style.height = target.offsetHeight + 'px';
+  target.style.height = `${target.offsetHeight}px`;
   target.offsetHeight;
   target.style.overflow = 'hidden';
   target.style.height = 0;
@@ -55,8 +55,9 @@ export function slideUp(target, duration) {
 
 export function fadeOut(element, duration) {
   element.style.transitionProperty = 'opacity';
-  element.style.transitionDuration = duration + 'ms';
+  element.style.transitionDuration = `${duration}ms`;
   element.style.opacity = '1';
+  element.style.display = 'block';
 
   requestAnimationFrame(function () {
     element.style.opacity = '0';
@@ -68,6 +69,36 @@ export function fadeOut(element, duration) {
     element.style.display = 'none';
   });
 }
+
+export function fadeIn(element, duration) {
+  element.style.transitionProperty = 'opacity';
+  element.style.transitionDuration = `${duration}ms`;
+  element.style.opacity = '0';
+  element.style.display = 'block';
+
+  requestAnimationFrame(function () {
+    element.style.opacity = '1';
+  });
+
+  element.addEventListener('transitionend', function () {
+    element.style.transition = '';
+    element.style.opacity = '';
+    element.style.display = 'block';
+  });
+}
+
+export function hide(element, duration = 300) {
+  element.style.transitionProperty = 'opacity';
+  element.style.transitionDuration = `${duration}ms`;
+  element.style.opacity = '';
+  element.style.display = 'none';
+}
+
+// export function show(element) {
+//   element.style.transition = '';
+//   element.style.opacity = '';
+//   element.style.display = 'block';
+// }
 
 export function numberWithSpaces(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');

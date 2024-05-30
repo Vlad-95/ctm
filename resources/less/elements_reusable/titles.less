@@ -35,9 +35,12 @@
 }
 
 .page-title {
+  .row-align-center-mixin();
   position: relative;
   padding-left: 70px;
   margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 20px 10px;
 
   &:before,
   &:after {
@@ -61,6 +64,10 @@
     color: @blue;
   }
 
+  .tabs {
+    margin-left: auto;
+  }
+
   &_big {
     &:before,
     &:after {
@@ -69,6 +76,18 @@
 
     h1 {
       font-size: 60px;
+      max-width: 992px;
+    }
+  }
+
+  &_bigger {
+    &:before,
+    &:after {
+      top: 48px;
+    }
+
+    h1 {
+      font-size: 83px;
       max-width: 992px;
     }
   }
