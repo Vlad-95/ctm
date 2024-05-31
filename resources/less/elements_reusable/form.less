@@ -1,3 +1,14 @@
+:root {
+  --ss-broder-color: lighten(@dark, 70%);
+  --ss-border-radius: 10px;
+  --ss-main-height: 50px;
+  --ss-spacing-s: 10px;
+  --ss-main-height: 50px;
+  --ss-font-color: @dark1;
+  --ss-primary-color: @blue;
+  --ss-font-placeholder-color: lighten(@dark, 70%);
+}
+
 .form {
   &__block {
     margin-bottom: 50px;
@@ -12,6 +23,44 @@
       display: inline-block;
       margin-bottom: 5px;
       padding-left: 5px;
+    }
+
+    &_delivery {
+      position: relative;
+
+      .form__radio {
+        max-width: none;
+      }
+
+      .input {
+        position: absolute;
+        left: 227px;
+        bottom: 0;
+        width: calc(100% - 227px) !important;
+        border: none !important;
+        opacity: 1;
+        transition: 0.3s;
+
+        &:disabled {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+
+      .select {
+        position: absolute;
+        left: 227px;
+        bottom: 0;
+        opacity: 1;
+        width: calc(100% - 227px);
+        height: 48px;
+        border: none;
+        transition: 0.3s;
+
+        &:disabled {
+          opacity: 0;
+        }
+      }
     }
   }
 
@@ -51,6 +100,10 @@
     padding: 10px;
     font-size: 15px;
     background-color: transparent;
+
+    &::placeholder {
+      color: lighten(@dark, 70%);
+    }
   }
 
   .textarea {
@@ -62,6 +115,26 @@
     font-size: 15px;
     resize: none;
     background-color: transparent;
+  }
+
+  .select {
+    background-color: transparent;
+    box-shadow: none;
+
+    .ss-values {
+      .ss-single {
+        margin-left: 0;
+        font-size: 15px;
+      }
+      .ss-placeholder {
+        padding-left: 0;
+      }
+    }
+
+    &.ss-disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   .file {
@@ -240,6 +313,16 @@
     }
   }
 
+  &_cart {
+    .textarea {
+      height: 50px;
+    }
+
+    .form__footer {
+      margin-top: 20px;
+    }
+  }
+
   &_search {
     position: relative;
     display: none;
@@ -282,6 +365,19 @@
         font-size: 12px;
         padding-left: 0;
       }
+
+      &_delivery {
+        .form__radio {
+          p {
+            height: 24px;
+            line-height: 24px;
+          }
+        }
+
+        .select {
+          height: 40px;
+        }
+      }
     }
 
     &__footer {
@@ -294,6 +390,16 @@
 
     .textarea {
       height: 80px;
+    }
+
+    .select {
+      min-height: 40px;
+
+      .ss-values {
+        .ss-placeholder {
+          padding: 0;
+        }
+      }
     }
 
     .file {
@@ -360,6 +466,30 @@
   .form {
     &__row {
       grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &_delivery {
+        height: 109px;
+
+        .form__radio {
+          max-width: 221px;
+        }
+
+        .input {
+          left: 0;
+          top: 69px;
+          border: 1px solid lighten(@dark, 70%) !important;
+          width: 100% !important;
+        }
+
+        .select {
+          left: 0;
+          top: 69px;
+          width: 100%;
+          border: 1px solid var(--ss-broder-color);
+        }
+      }
     }
 
     &__footer {

@@ -17,6 +17,7 @@
     "@fancyapps/ui": "^5.0.36",
     "air-datepicker": "^3.5.3",
     "inputmask": "^5.0.8",
+    "slim-select": "^2.8.2",
     "swiper": "^11.1.3"
   }
 }

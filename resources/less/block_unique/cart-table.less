@@ -1,0 +1,109 @@
+.cart-table {
+  table {
+    border-collapse: collapse;
+    width: 1190px;
+
+    tr {
+      &:first-child {
+        td {
+          border-top: 1px solid @gray5;
+          border-color: @gray5;
+          font-size: 13px;
+          font-weight: 700;
+        }
+      }
+
+      &:not(:first-child) {
+        td {
+          padding: 8px 5px;
+          height: 60px;
+
+          &.cart-col {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    td {
+      font-size: 12px;
+      font-weight: 400;
+      border-bottom: 1px solid @gray3;
+      padding: 6px 5px;
+
+      &:first-child {
+        padding-left: 0 !important;
+      }
+
+      &:last-child {
+        padding-right: 0 !important;
+      }
+
+      &.number-one-col {
+        width: 144px;
+      }
+
+      &.number-two-col {
+        width: 149px;
+      }
+
+      &.name-col {
+        width: 160px;
+      }
+
+      &.brand-col {
+        width: 115px;
+      }
+
+      &.location-col {
+        width: 150px;
+      }
+
+      &.status-col {
+        width: 150px;
+      }
+
+      &.price-col {
+        width: 118px;
+        text-align: center;
+      }
+
+      &.count-col {
+        width: 93px;
+        text-align: center;
+      }
+
+      &.cart-col {
+        width: 107px;
+        text-align: center;
+      }
+    }
+  }
+
+  .btn {
+    white-space: nowrap;
+    font-size: 11px;
+    padding: 10px 22px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cart-table {
+    overflow: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: @blue @gray;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: @gray;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: @blue;
+      border-radius: 5px;
+    }
+  }
+}

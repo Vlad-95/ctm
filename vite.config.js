@@ -39,6 +39,7 @@ export default defineConfig({
         products_list: resolve(__dirname, 'products_list.html'),
         search_result: resolve(__dirname, 'search_result.html'),
         factory: resolve(__dirname, 'factory.html'),
+        cart: resolve(__dirname, 'cart.html'),
       },
 
       output: {

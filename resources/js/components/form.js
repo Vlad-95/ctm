@@ -1,9 +1,13 @@
 import AirDatepicker from 'air-datepicker';
 import Inputmask from 'inputmask';
+import SlimSelect from 'slim-select';
 
 export const form = () => {
   if (document.querySelector('.form').length) {
+    const phoneInput = document.querySelectorAll('.js-phone');
     const birthDateInput = document.querySelector('.js-birthdate-calendar');
+    const file = document.querySelectorAll('.js-file');
+    const select = document.querySelectorAll('.form .select');
 
     if (birthDateInput) {
       new AirDatepicker(birthDateInput, {
@@ -15,15 +19,45 @@ export const form = () => {
       });
     }
 
-    document.querySelectorAll('.js-phone').forEach((item) => {
+    phoneInput.forEach((item) => {
       new Inputmask('+7 (999) 999-99-99').mask(item);
     });
 
     // показ имени файла
-    document.querySelectorAll('.js-file').forEach((item) => {
+    file.forEach((item) => {
       item.addEventListener('change', (e) => {
         e.target.closest('.file').querySelector('p').textContent =
           e.target.files[0].name;
+      });
+    });
+
+    // Селект
+    select.forEach((item) => {
+      new SlimSelect({
+        select: item,
+        settings: {
+          contentPosition: 'absolute',
+          showSearch: false,
+          placeholderText: 'Выберите пункт выдачи',
+        },
+      });
+    });
+
+    // изменение способа доставки
+    const deliveryFormItem = document.querySelector('.form__item_delivery');
+    const deliveryRadios = document.querySelectorAll('.form__radio input');
+    const deliveryInput = document.querySelector('.input[data-type="1"]');
+    const deliverySelect = document.querySelector('.select[data-type="0"]');
+    deliveryRadios.forEach((item) => {
+      item.addEventListener('change', (e) => {
+        if (e.target.value === '1') {
+          deliveryInput.disabled = false;
+          deliverySelect.disabled = true;
+        } else {
+          deliveryInput.disabled = true;
+          deliverySelect.disabled = false;
+        }
+        console.log(deliveryInput);
       });
     });
   }
