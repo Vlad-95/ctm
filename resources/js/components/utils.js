@@ -1,4 +1,4 @@
-export function slideDown(target, duration) {
+export function slideDown(target, duration = 300) {
   target.style.removeProperty('display');
   let display = window.getComputedStyle(target).display;
   if (display === 'none') display = 'block';
@@ -27,7 +27,7 @@ export function slideDown(target, duration) {
   }, duration);
 }
 
-export function slideUp(target, duration) {
+export function slideUp(target, duration = 300) {
   target.style.transitionProperty = 'height, margin, padding';
   target.style.transitionDuration = `${duration}ms`;
   target.style.boxSizing = 'border-box';
@@ -53,7 +53,7 @@ export function slideUp(target, duration) {
   }, duration);
 }
 
-export function fadeOut(element, duration) {
+export function fadeOut(element, duration = 300) {
   element.style.transitionProperty = 'opacity';
   element.style.transitionDuration = `${duration}ms`;
   element.style.opacity = '1';
@@ -70,7 +70,7 @@ export function fadeOut(element, duration) {
   });
 }
 
-export function fadeIn(element, duration) {
+export function fadeIn(element, duration = 300) {
   element.style.transitionProperty = 'opacity';
   element.style.transitionDuration = `${duration}ms`;
   element.style.opacity = '0';

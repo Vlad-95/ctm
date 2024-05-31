@@ -14,9 +14,9 @@ export const accordion = () => {
         toggle.classList.toggle('active');
 
         if (parent.classList.contains('active')) {
-          slideDown(parent.querySelector('.js-accordion-dropdown'), 300);
+          slideDown(parent.querySelector('.js-accordion-dropdown'));
         } else {
-          slideUp(parent.querySelector('.js-accordion-dropdown'), 300);
+          slideUp(parent.querySelector('.js-accordion-dropdown'));
         }
 
         item.querySelectorAll('.js-accordion-item').forEach((elem) => {
@@ -26,7 +26,7 @@ export const accordion = () => {
               .querySelector('.js-accordion-toggle')
               .classList.remove('active');
 
-            slideUp(elem.querySelector('.js-accordion-dropdown'), 300);
+            slideUp(elem.querySelector('.js-accordion-dropdown'));
           }
         });
       }

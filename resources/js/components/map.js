@@ -1,6 +1,3 @@
-import { options } from 'less';
-import { slideDown, slideUp, fadeOut } from './utils';
-
 export const map = () => {
   let myMap;
   let objectManager;
