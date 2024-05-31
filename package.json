@@ -16,7 +16,9 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
     "air-datepicker": "^3.5.3",
+    "axios": "^1.7.2",
     "inputmask": "^5.0.8",
+    "js-cookie": "^3.0.5",
     "slim-select": "^2.8.2",
     "swiper": "^11.1.3"
   }

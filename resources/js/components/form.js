@@ -1,6 +1,7 @@
 import AirDatepicker from 'air-datepicker';
 import Inputmask from 'inputmask';
 import SlimSelect from 'slim-select';
+import axios from 'axios';
 
 export const form = () => {
   if (document.querySelector('.form').length) {
@@ -61,4 +62,6 @@ export const form = () => {
       });
     });
   }
+
+  // для отправки запросов Аяксом использовать axios https://axios-http.com/
 };

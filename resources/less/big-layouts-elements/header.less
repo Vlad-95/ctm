@@ -196,6 +196,20 @@
     background-color: @white;
     border: 1px solid @blue;
     border-top: none;
+    scrollbar-width: thin;
+    scrollbar-color: @blue @gray;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: @gray;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: @blue;
+      border-radius: 5px;
+    }
 
     &.show {
       opacity: 1;
@@ -349,7 +363,7 @@
 
     .burger {
       span {
-        color: @white;
+        background-color: @white;
       }
     }
 

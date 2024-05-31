@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie';
+
 export function slideDown(target, duration = 300) {
   target.style.removeProperty('display');
   let display = window.getComputedStyle(target).display;
@@ -125,3 +127,120 @@ export const utils = () => {
     });
   }
 };
+
+let cart = [];
+
+// Добавление в корзину
+export function addToCart(elem) {
+  const id = elem.getAttribute('data-id');
+  const count = elem
+    .closest('tr')
+    .querySelector('.js-count .count__input').value;
+
+  cart.push({ id, count: +count });
+
+  console.log(cart);
+  saveCart();
+  showCart();
+}
+
+// удаления одного элемента
+export function removeElemCart(elem) {
+  const id = elem.getAttribute('data-id');
+  cart = cart.filter((elem) => elem.id != id);
+
+  console.log(cart);
+  saveCart();
+  showCart();
+}
+
+export function incElemList(elem) {
+  const id = elem.getAttribute('data-id');
+  const elemInCart = cart.find((elem) => elem.id == id);
+
+  if (elemInCart) {
+    elemInCart.count += 1;
+    console.log(cart);
+  }
+
+  saveCart();
+  showCart();
+}
+
+export function decElemList(elem) {
+  const id = elem.getAttribute('data-id');
+  const elemInCart = cart.find((elem) => elem.id == id);
+
+  if (elemInCart) {
+    if (elemInCart.count > 1) {
+      elemInCart.count -= 1;
+    } else {
+      cart = cart.filter((elem) => elem.id != id);
+    }
+  }
+
+  saveCart();
+  showCart();
+}
+
+export function incElemCart(elem) {
+  let id = $(elem).attr('data-id');
+  const elemInCart = cart.find((elem) => elem.id == id);
+
+  elemInCart.count += 1;
+
+  saveCart();
+}
+
+export function decElemCart(elem) {
+  let id = $(elem).attr('data-id');
+  const elemInCart = cart.find((elem) => elem.id == id);
+
+  elemInCart.count -= 1;
+
+  saveCart();
+}
+
+// сохранение в корзину
+export function saveCart() {
+  Cookies.set('cart', JSON.stringify(cart), 7);
+}
+
+// Показ счетчика корзины
+export function showCart() {
+  const countItems = cart.length;
+
+  const headerCartCount = document.querySelector('.header__cart .cart span');
+
+  if (countItems) {
+    headerCartCount.textContent = countItems;
+  } else {
+    headerCartCount.textContent = '0';
+  }
+}
+
+// Загрузка корзины
+export function loadCart() {
+  if (Cookies.get('cart')) {
+    cart = JSON.parse(Cookies.get('cart'));
+  }
+
+  showCart();
+
+  // отмечаем добавленные элементы
+  if (document.querySelectorAll('.js-add-to-cart').length) {
+    cart.forEach((elem) => {
+      const addToCartBtn = document.querySelector(
+        `.js-add-to-cart[data-id="${elem.id}"]`
+      );
+      const countInput = addToCartBtn
+        .closest('tr')
+        .querySelector('.js-count .count__input');
+
+      countInput.value = elem.count;
+      addToCartBtn.classList.add('in-cart');
+
+      addToCartBtn.textContent = 'В корзине';
+    });
+  }
+}

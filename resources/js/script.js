@@ -8,6 +8,7 @@ import { map } from './components/map';
 import { modal } from './components/modal';
 import { form } from './components/form';
 import { factory } from './components/factory';
+import { cart } from './components/cart';
 
 document.addEventListener('DOMContentLoaded', function () {
   utils();
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
   form();
   tabs();
   factory();
+  cart();
 
   Fancybox.bind('[data-fancybox]', {});
 });

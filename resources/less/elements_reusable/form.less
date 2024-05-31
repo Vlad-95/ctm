@@ -104,6 +104,10 @@
     &::placeholder {
       color: lighten(@dark, 70%);
     }
+
+    &.error {
+      border-color: red;
+    }
   }
 
   .textarea {
@@ -115,6 +119,10 @@
     font-size: 15px;
     resize: none;
     background-color: transparent;
+
+    &.error {
+      border-color: red;
+    }
   }
 
   .select {
@@ -234,6 +242,14 @@
         & + p {
           &:after {
             opacity: 1;
+          }
+        }
+      }
+
+      &.error {
+        & + p {
+          &:before {
+            border-color: red;
           }
         }
       }
