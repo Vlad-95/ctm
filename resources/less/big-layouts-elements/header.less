@@ -63,6 +63,13 @@
         width: 20px;
         height: 20px;
         fill: @dark;
+        transition: 0.3s;
+      }
+
+      &.active {
+        svg {
+          fill: @blue!important;
+        }
       }
     }
   }
@@ -102,6 +109,7 @@
   &__langs {
     .row-justify-center-mixin();
     .row-align-center-mixin();
+    position: relative;
 
     .current {
       position: relative;
@@ -110,6 +118,7 @@
       text-transform: uppercase;
       color: @dark;
       padding-right: 12px;
+      cursor: pointer;
 
       &:after {
         content: '';
@@ -118,11 +127,59 @@
         top: 4px;
         border: 5px solid transparent;
         border-top: 5px solid @blue;
+        transition: 0.3s;
+        transform-origin: 50% 25%;
+      }
+
+      &.active {
+        &:after {
+          transform: rotate(180deg);
+        }
       }
     }
 
     .dropdown {
-      display: none;
+      position: absolute;
+      left: 0;
+      top: calc(100% + 40px);
+      background-color: @white;
+      border: 1px solid @blue;
+      border-top: none;
+      width: 100%;
+      padding: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+
+      &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: @dark;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+
+        li {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          a {
+            transition: 0.3s;
+
+            &:hover {
+              color: @blue;
+            }
+          }
+        }
+      }
+
+      &.show {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 
@@ -174,6 +231,22 @@
           bottom: 6px;
           transform: rotate(-45deg);
         }
+      }
+    }
+  }
+
+  .form_search {
+    background-color: @white;
+    border: 1px solid @blue;
+    border-top: none;
+
+    .input {
+      color: @dark1;
+    }
+
+    button {
+      svg {
+        fill: @dark1;
       }
     }
   }
@@ -359,11 +432,35 @@
       .current {
         color: @white;
       }
+
+      .dropdown {
+        background-color: fade(@dark, 70%);
+        border: none;
+
+        &__list {
+          color: @white;
+        }
+      }
     }
 
     .burger {
       span {
         background-color: @white;
+      }
+    }
+
+    .form_search {
+      background-color: fade(@dark, 70%);
+      border: none;
+
+      .input {
+        color: @white;
+      }
+
+      button {
+        svg {
+          fill: @white;
+        }
       }
     }
 
@@ -421,6 +518,12 @@
           min-width: 20px;
           padding: 2px;
         }
+      }
+    }
+
+    &__langs {
+      .dropdown {
+        top: calc(100% + 25px);
       }
     }
 

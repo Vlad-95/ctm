@@ -96,6 +96,31 @@ export function hide(element, duration = 300) {
   element.style.display = 'none';
 }
 
+export function mmenuClose() {
+  const mmenu = document.querySelector('.js-mmenu');
+  const burger = document.querySelector('.burger');
+
+  burger.classList.remove('active');
+  mmenu.classList.remove('show');
+  document.body.classList.remove('no-scroll');
+}
+
+export function searchClose() {
+  const searchToggleBtn = document.querySelector('.js-search-toggle');
+  const searchForm = document.querySelector('.js-search-form');
+
+  searchToggleBtn.classList.remove('active');
+  searchForm.classList.remove('show');
+}
+
+export function langsClose() {
+  const langs = document.querySelector('.header__langs');
+  const langsToggle = langs.querySelector('.current');
+  const langsDropdown = langs.querySelector('.dropdown');
+
+  langsToggle.classList.remove('active');
+  langsDropdown.classList.remove('show');
+}
 // export function show(element) {
 //   element.style.transition = '';
 //   element.style.opacity = '';

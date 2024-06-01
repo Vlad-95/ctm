@@ -3,7 +3,25 @@ import Inputmask from 'inputmask';
 import SlimSelect from 'slim-select';
 import axios from 'axios';
 
+import { mmenuClose, langsClose } from './utils';
+
 export const form = () => {
+  // открытие/закрытие формы поиска
+  const searchToggleBtn = document.querySelector('.js-search-toggle');
+  const searchForm = document.querySelector('.js-search-form');
+
+  searchToggleBtn.addEventListener('click', () => {
+    mmenuClose();
+    langsClose();
+    searchToggleBtn.classList.toggle('active');
+
+    if (searchToggleBtn.classList.contains('active')) {
+      searchForm.classList.add('show');
+    } else {
+      searchForm.classList.remove('show');
+    }
+  });
+
   if (document.querySelector('.form').length) {
     const phoneInput = document.querySelectorAll('.js-phone');
     const birthDateInput = document.querySelector('.js-birthdate-calendar');

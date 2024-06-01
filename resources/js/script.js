@@ -9,6 +9,7 @@ import { modal } from './components/modal';
 import { form } from './components/form';
 import { factory } from './components/factory';
 import { cart } from './components/cart';
+import { langs } from './components/langs';
 
 document.addEventListener('DOMContentLoaded', function () {
   utils();
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   tabs();
   factory();
   cart();
+  langs();
 
   Fancybox.bind('[data-fancybox]', {});
 });
