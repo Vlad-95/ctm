@@ -27,18 +27,18 @@ export const map = () => {
       const placeholdersImage = [
         {
           group: 'offices',
-          default: '/img/icons/placeholder-violet.png',
-          active: '/img/icons/placeholder-violet_big.png',
+          default: './img/icons/placeholder-violet.png',
+          active: './img/icons/placeholder-violet_big.png',
         },
         {
           group: 'productions',
-          default: '/img/icons/placeholder-blue.png',
-          active: '/img/icons/placeholder-blue_big.png',
+          default: './img/icons/placeholder-blue.png',
+          active: './img/icons/placeholder-blue_big.png',
         },
         {
           group: 'platforms',
-          default: '/img/icons/placeholder-green.png',
-          active: '/img/icons/placeholder-green_big.png',
+          default: './img/icons/placeholder-green.png',
+          active: './img/icons/placeholder-green_big.png',
         },
       ];
 

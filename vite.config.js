@@ -40,6 +40,7 @@ export default defineConfig({
         search_result: resolve(__dirname, 'search_result.html'),
         factory: resolve(__dirname, 'factory.html'),
         cart: resolve(__dirname, 'cart.html'),
+        default_text_page: resolve(__dirname, 'default_text_page.html'),
       },
 
       output: {

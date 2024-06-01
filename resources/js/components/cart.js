@@ -40,6 +40,7 @@ export const cart = () => {
   const removeElemCartBtn = document.querySelectorAll('.js-remove-from-cart');
   removeElemCartBtn.forEach((item) => {
     item.addEventListener('click', () => {
+      item.closest('tr').remove();
       removeElemCart(item);
     });
   });
