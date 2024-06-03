@@ -15,16 +15,17 @@
       &:after {
         content: '';
         position: absolute;
-        left: -3px;
-        top: -3px;
-        border: 3px solid transparent;
-        border-bottom: 11px solid @dark1;
+        left: -2px;
+        top: 0;
+        width: 5px;
+        height: 10px;
+        background-image: url('/img/icons/arrow2_t.png');
+        background-size: 5px 10px;
       }
 
       &:after {
-        left: -3px;
         top: auto;
-        bottom: -5px;
+        bottom: 0;
         transform: rotate(180deg);
       }
     }
@@ -46,15 +47,17 @@
       &:after {
         content: '';
         position: absolute;
-        left: -5px;
+        width: 10px;
+        height: 5px;
+        background-image: url('/img/icons/arrow2.png');
+        background-size: 10px 5px;
+        left: 0;
         top: -2px;
-        border: 3px solid transparent;
-        border-right: 11px solid @dark1;
       }
 
       &:after {
         left: auto;
-        right: -5px;
+        right: 0;
         transform: rotate(180deg);
       }
     }

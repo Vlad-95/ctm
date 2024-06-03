@@ -1,0 +1,83 @@
+.about-page {
+  .page-intro {
+    margin-bottom: 60px;
+  }
+
+  .highlight-text {
+    margin-bottom: 47px;
+  }
+
+  &__content {
+    & > .wrapper {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      &:first-of-type {
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: -53px;
+          top: 10px;
+          width: 26px;
+          height: 26px;
+          background-image: url('/img/icons/target-blue.png');
+          background-position: center;
+          background-size: 26px 26px;
+        }
+      }
+    }
+  }
+
+  .gallery {
+    margin: 85px 0 75px;
+  }
+
+  & > .sep {
+    height: 60px;
+    max-width: 1190px;
+    margin: 84px auto -20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about-page {
+    .page-intro {
+      margin-bottom: 40px;
+    }
+
+    &__content {
+      & > .wrapper {
+        position: relative;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    .highlight-text {
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      margin: 40px 0;
+    }
+
+    .contacts-block {
+      padding-bottom: 40px;
+    }
+
+    & > .sep {
+      max-width: none;
+      width: calc(100% - 30px);
+      margin: 40px 15px 0;
+    }
+  }
+}
